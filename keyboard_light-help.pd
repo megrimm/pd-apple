@@ -55,14 +55,13 @@ Apples;
 #X msg 125 39 bang;
 #X obj 158 70 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 10 -204786
 -1 -1 0 0;
-#X floatatom 135 214 5 0 0 0 - - -;
-#X obj 135 177 apple/keyboard_light;
+#X floatatom 135 214 5 0 0 0 - - -, f 5;
 #X text 293 69 light level;
 #X obj 255 91 hsl 128 15 40 4000 1 0 empty empty empty -2 -6 0 10 -204800
 -1 -1 0 0;
 #X text 390 90 fade time;
-#X floatatom 261 110 5 0 0 0 - - -;
-#X floatatom 164 93 5 0 0 0 - - -;
+#X floatatom 261 110 5 0 0 0 - - -, f 5;
+#X floatatom 164 93 5 0 0 0 - - -, f 5;
 #X text 209 136 set level and fade as a list;
 #X msg 164 147 0 50;
 #X msg 160 125 1 1000;
@@ -79,11 +78,12 @@ and 1);
 keyboard light level \, the second sets the fade time.;
 #X obj 104 495 pddp/pddplink http://www.osxbook.com/book/bonus/chapter10/light/
 ;
-#X connect 13 0 16 0;
-#X connect 14 0 16 0;
-#X connect 14 0 21 0;
-#X connect 16 0 15 0;
-#X connect 18 0 16 1;
-#X connect 18 0 20 0;
-#X connect 23 0 16 0;
-#X connect 24 0 16 0;
+#X obj 135 177 keyboard_light;
+#X connect 13 0 32 0;
+#X connect 14 0 20 0;
+#X connect 14 0 32 0;
+#X connect 17 0 19 0;
+#X connect 17 0 32 1;
+#X connect 22 0 32 0;
+#X connect 23 0 32 0;
+#X connect 32 0 15 0;
