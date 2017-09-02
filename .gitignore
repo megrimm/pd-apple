@@ -1,0 +1,4 @@
+
+ambient_light_sensor.o
+*.pd_darwin
+*.o
